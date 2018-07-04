@@ -1,4 +1,4 @@
-#Introduction
+##Introduction
 * This is a RESTful blog that I developed using express, mongodb, and semantic-ui
 
 #CRUD
