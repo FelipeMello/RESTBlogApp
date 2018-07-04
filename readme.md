@@ -1,19 +1,7 @@
-##Introduction
-    * Define REST and explain WHY it matters
-    * List all 7 RESTful routes
-    * Show example of RESTful routing in practice
+#Introduction
+* This is a RESTful blog that I developed using express, mongodb, and semantic-ui
 
-#Blog Index
-    * Setup the Blog App
-    * Create the Blog model
-    * Add INDEX route and template
-
-#Basic Layout
-    * Add Header and Footer Partials
-    * Include Semantic UI
-    * Add Simple Nav
-    
-#Putting the C in CRUD
+#CRUD
     * Add NEW route
     * Add NEW template
     * Add CREATE route
