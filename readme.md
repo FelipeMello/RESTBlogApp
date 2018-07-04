@@ -24,4 +24,3 @@
     * Sanitize client input
     * Style Index page
     * Update REST Table    
-    
