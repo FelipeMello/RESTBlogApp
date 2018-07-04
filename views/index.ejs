@@ -1,31 +1,35 @@
 <%include ./partials/header %>
 
-<div class="ui container">
-    <div class="ui container">
-        <h1>Blog Posts</h1>        
-    </div>
-    <% blogs.forEach(function(blog){%>
-    <div class="ui main text container segment">
-        <div class="ui huge header"><%= blog.title %></div>
-        <div class="ui top attached ">
-            <div class="item">
-                <img class="ui centered rounded image" src="<%=blog.image%>">        
-                <div class="content">
-                    <span><%=blog.created.toDateString()%></span>        
+<div class="ui main text container">
+    <div class="ui huge header"> RESTful Blog</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% blogs.forEach(function(blog){%>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%=blog.image%>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>    
+                        <div class="meta">
+                            <span><%=blog.created.toDateString()%></span>        
+                        </div>
+                        <div class="description">
+                            <p> <%= blog.body.substring(0,100) %>...</p>                
+                            <!-- if this was <%- %> people would be able to insert java script or html text-->
+                        </div>
+                        <div class="extra">
+                            <a class ="ui floated basic violet button" href="/blogs/<%= blog._id %>">
+                                Read More
+                                <i class ="right chevron icon"></i>
+                            </a>        
+                        </div>
+                    </div>
                 </div>
-                <div class="description">
-                    <p> <%= blog.body.substring(0,100) %></p>        
-                    <!-- if this was <%- %> people would be able to insert java script or html text-->
-                </div>
-                <a href="/blogs/<%= blog._id %>">Read More</a>
-                
-            </div>    
-        
+            <% }) %>        
         </div>
     </div>
-
-
-<% }) %>
+    
 </div>
 
 
